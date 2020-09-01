@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			<h2>Dashboard</h2>
+		</div>
+		<h2>Analysis of Chatbot Enquiries</h2>
+		
+	</div>
+	</header>
+	
+		
+	<div class="ml-container">	
+		<form action="{{ url_for('Countries')}}" method="POST">
+		<p>Top Five Countries</p>        
+        <input type="submit" class="btn-info" name="submit_button" value="Countries">       
+        </form>
+	</div>
+	
+	<div class="ml-container">
+		<form action="{{ url_for('Cities')}}" method="POST">
+		<p>Top Five Cities</p>
+        <input type="submit" class="btn-info" name="submit_button" value="Cities">
+        </form>
+	</div>
+	
+	<div class="ml-container">
+		<form action="{{ url_for('Regions')}}" method="POST">          
+        <p>Top Five Regions</p>      
+        <input type="submit" class="btn-info" value="Regions">
+        </form>
+	</div>
+	
+	<div class="ml-container">
+		<form action="{{ url_for('Frequent_Words_unigram')}}" method="POST">              
+        <p>Most Frequent Words(Unigram)</p>
+        <input type="submit" class="btn-info" value="Frequent_Words_unigram">
+        </form>
+	</div>
+	
+	<div class="ml-container">
+		<form action="{{ url_for('Frequent_Words_bigram')}}" method="POST">              
+        <p>Most Frequent Words(Bigram)</p>
+        <input type="submit" class="btn-info" value="Frequent_Words_bigram">
+        </form>
+	</div>
+	
+	<div class="ml-container">
+		<form action="{{ url_for('Frequent_Words_trigram')}}" method="POST">              
+        <p>Most Frequent Words(Trigram)</p>
+        <input type="submit" class="btn-info" value="Frequent_Words_trigram">
+        </form>
+	</div>      
+        
+    <div class="ml-container">
+		<form action="{{ url_for('Wordcloud')}}" method="POST">
+		<p>Wordcloud</p>
+		<input type="submit" class="btn-info" name="submit_button" value="Wordcloud">
+		
+    	</form>
+	</div> 
+		
+	</div>
+        <form action="{{ url_for('Topic_Modelling')}}" method="POST">
+        <p>Topic Modelling</p>        
+        <input type="submit" class="btn-info" name="submit_button" value="Topic_Modelling">
+
+		</form>
+	</div> 
+	
+
+</body>
+</html>
+
